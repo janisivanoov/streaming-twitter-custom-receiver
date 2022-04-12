@@ -14,18 +14,9 @@ import twitter4j.TwitterStreamFactory;
 
 import static com.google.common.base.Preconditions.checkArgument;
 
-/**
- * Twitter stream receiver. Make sure resources/twitter4j.properties contains your Twitter
- * authentication values. {@see https://apps.twitter.com}.
- *
- * This receiver tracks the status messages containing the keyword twitter.
- */
 public final class TwitterReceiver extends Receiver<Status> {
   private static final Logger LOGGER = LoggerFactory.getLogger(TwitterReceiver.class);
 
-  /**
-   * The keywords to be tracked.
-   */
   private static final String KEYWORDS = "twitter";
 
   private final TwitterStream twitterStream;
